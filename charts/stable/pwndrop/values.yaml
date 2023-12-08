@@ -1,7 +1,7 @@
 image:
-  repository: tccr.io/truecharts/pwndrop
+  repository: ghcr.io/linuxserver/pwndrop
   pullPolicy: IfNotPresent
-  tag: v1.0.1@sha256:7c88fae22ccba73cacd29e261307232368973f0cb70143f45de9a975fb24f03f
+  tag: 1.0.1@sha256:d2bd3d7b9ee9b3872c1cb072693a99fcc12a14607df2717ff475372370ad95ad
 service:
   main:
     ports:

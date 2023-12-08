@@ -1,6 +1,6 @@
 image:
-  repository: tccr.io/truecharts/mylar3
-  tag: v0.7.3@sha256:e09707d1adcd3c155248e0ae983f64157527654e4794bf3ac69bdcf20445d10f
+  repository: linuxserver/mylar3
+  tag: version-v0.7.6@sha256:d35716daf6b262890a36415412956589a493422c7754050c3acc302f2f17c543
   pullPolicy: IfNotPresent
 service:
   main:

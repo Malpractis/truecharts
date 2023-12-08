@@ -1,7 +1,7 @@
 image:
-  repository: tccr.io/truecharts/theme-park
+  repository: ghcr.io/onedr0p/theme-park
   pullPolicy: IfNotPresent
-  tag: 1.13.0@sha256:c6a4361d096fa410edfaf2c2e3ae9c9cbf66eaddd857b298409e4e445b38e313
+  tag: 1.14@sha256:4b99cd5b29b9375b889818e86ec3be34c06ddfa9190a66216bb71e2534c4da17
 service:
   main:
     ports:

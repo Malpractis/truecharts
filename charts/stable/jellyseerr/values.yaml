@@ -1,6 +1,6 @@
 image:
-  repository: tccr.io/truecharts/jellyseerr
-  tag: v1.6.0@sha256:5e6c629b48ed77f96141538ed734ef752d25dbb13ac6b24defff1a47a3159951
+  repository: fallenbagel/jellyseerr
+  tag: 1.7.0@sha256:6dcdb5ba50913a14b2bd7df6388607ce175121f3416679c2746501256ac9f075
   pullPolicy: IfNotPresent
 service:
   main:
@@ -14,7 +14,6 @@ persistence:
 portal:
   open:
     enabled: true
-
 workload:
   main:
     podSpec:

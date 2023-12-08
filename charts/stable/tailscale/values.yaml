@@ -1,7 +1,7 @@
 image:
   repository: tailscale/tailscale
   pullPolicy: IfNotPresent
-  tag: v1.46.1@sha256:542963c00c1488a77bcba72c4a179361932e97e66b5a40bcde3e7520cac4f676
+  tag: v1.54.1@sha256:ce594e3d18874960caa3f7d8fd8fc39a89b9c34e3ff05d6fdf3124cc550c8c2c
 serviceAccount:
   main:
     enabled: true

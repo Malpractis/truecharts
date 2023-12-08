@@ -1,6 +1,6 @@
 image:
-  repository: tccr.io/truecharts/linkding
-  tag: v1.19.1@sha256:2dbd1637c054c1e8f008f9f0c54fad36e7ab6cd284273f7bc2a5b1d77bc5739e
+  repository: sissbruecker/linkding
+  tag: 1.23.0@sha256:71cc38610da4d74630af00c66fea07b4c0faf6316f7781d83a8296058a8e248e
   pullPolicy: IfNotPresent
 service:
   main:

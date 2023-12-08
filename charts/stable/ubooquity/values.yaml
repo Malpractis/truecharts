@@ -1,7 +1,7 @@
 image:
-  repository: tccr.io/truecharts/ubooquity
+  repository: ghcr.io/linuxserver/ubooquity
   pullPolicy: IfNotPresent
-  tag: v2.1.2@sha256:58e6db5cbc2beb80ed619cf6febbd2a788b2f547a45904507389ecea98e65915
+  tag: 2.1.2@sha256:c6b38fad6600916d16d7ac4b029827f79cee56344a2b0a5b9f36ae8561ca5e8d
 service:
   main:
     ports:

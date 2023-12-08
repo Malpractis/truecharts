@@ -1,7 +1,7 @@
 image:
-  repository: tccr.io/truecharts/libremdb
+  repository: quay.io/pussthecatorg/libremdb
   pullPolicy: IfNotPresent
-  tag: latest@sha256:2285145a4340e2eeacca431f2193bd1f28a789ce061c8c2a1b20b019c9aa63ab
+  tag: latest@sha256:1f0d5451a172ebfccdd14dc2fd07c6ae24f94884466ce90aa1204cb8f1167713
 service:
   main:
     ports:
@@ -16,11 +16,9 @@ persistence:
 redis:
   enabled: true
   redisUsername: default
-
 portal:
   open:
     enabled: true
-
 workload:
   main:
     podSpec:

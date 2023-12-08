@@ -1,7 +1,7 @@
 image:
-  repository: tccr.io/truecharts/mstream
+  repository: ghcr.io/linuxserver/mstream
   pullPolicy: IfNotPresent
-  tag: v5.11.4@sha256:074f9af075b65c348239dd28bb505f3964c19a70af6c59be8f4b29316fcb1651
+  tag: 5.11.4@sha256:aeebefffe40d7dceb15ec7afdab6fc69b7e9516fd22e6a26e378a88edb9bd215
 service:
   main:
     ports:

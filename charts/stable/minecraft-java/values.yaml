@@ -1,58 +1,62 @@
 image:
-  repository: tccr.io/truecharts/minecraft-java
-  tag: v2023.4.1@sha256:c176a9bed87e36f89a79d0927e45677ad5b88edf0452d89934714dcce5243cb7
+  repository: itzg/minecraft-server
+  tag: 2023.11.1@sha256:cb98ad8c143ab0cf83351ec6a9fd76256152f7b310988f9aa1acfaaf4aacbc77
   pullPolicy: Always
-j20Image:
-  repository: tccr.io/truecharts/minecraft-java20
-  tag: latest@sha256:897e4e94c64d46f68858a291079fb53721a638c58b338f6c38ba85615cf1d736
+j21Image:
+  repository: itzg/minecraft-server
+  tag: 2023.11.1-java21@sha256:312de713187f40206d2433f6c76c4f1f5efe993dcf7c0f842b8a7e0274bd5edd
   pullPolicy: Always
-j20AlpineImage:
-  repository: tccr.io/truecharts/minecraft-java20-alpine
-  tag: v2023.4.1@sha256:2399cba3c7599b9dd50cba372b5051f01e5e07882dd0258759eb2b721fd41abd
+j21graalvmImage:
+  repository: itzg/minecraft-server
+  tag: 2023.11.1-java21-graalvm@sha256:49d25c5aa26dd67326f4626ae015dcf5033ed6e9178587dce915a04b16de6ac0
+  pullPolicy: Always
+j21alpineImage:
+  repository: itzg/minecraft-server
+  tag: 2023.11.1-java21-alpine@sha256:18c2c81eff7ce4a630b676f99223fcb8aa20c525f3b8ae1cd6fbf612d5d39cf0
   pullPolicy: Always
 j17j9Image:
-  repository: tccr.io/truecharts/minecraft-java17-openj9
-  tag: v2023.4.1@sha256:a0c78f26955bdd19117db78f008749345af9fbdce7be4724efddeb4e1aea4495
+  repository: itzg/minecraft-server
+  tag: 2023.11.1-java17-openj9@sha256:6e3078b58bb3728c0ccdf18402712faab39624cfcc24a72ef237d31579fd2bdc
   pullPolicy: Always
 j17jdkImage:
-  repository: tccr.io/truecharts/minecraft-java17-jdk
-  tag: v2023.4.1@sha256:281daf069cecacf710e2f3b7b8bdb4882e96bf655605204b2f33f259b5f8cbc9
+  repository: itzg/minecraft-server
+  tag: 2023.11.1-java17-jdk@sha256:e8ddd3a22c01937554332dae55bce53a0149740ccf22a6105138126382dfee38
   pullPolicy: Always
-j17gceImage:
-  repository: tccr.io/truecharts/minecraft-java17-graalvm-ce
-  tag: latest@sha256:20e8f1dd890f9ef49a58e865039496a13dd9e46dde723f335cf037122b83a0b2
+j17graalvmImage:
+  repository: itzg/minecraft-server
+  tag: 2023.11.1-java17-graalvm@sha256:1ede29fa5a96bd278d64400f548dde321c7c0762922c1097f17ba5c6a6f047f6
   pullPolicy: Always
 j17alpineImage:
-  repository: tccr.io/truecharts/minecraft-java17-alpine
-  tag: v2023.4.1@sha256:f89317c45ae57345d756b5711d348288141248a01de6f9d8b3ba8893ffb2fc59
+  repository: itzg/minecraft-server
+  tag: 2023.11.1-java17-alpine@sha256:c330401db62f07fbf447eef1c269394e8690d6b659f679821315f5c4c6463849
   pullPolicy: Always
 j11Image:
-  repository: tccr.io/truecharts/minecraft-java11
-  tag: latest@sha256:de15c958a648cad5a0813a528e36ab8e78e84f95e572c291aa3e4de36aae5556
+  repository: itzg/minecraft-server
+  tag: 2023.11.1-java11@sha256:749a17891fb0a2b211062fc2d7a3dd97e0fc76e71e9a908906ec8310cc8aaf95
   pullPolicy: Always
 j11jdkImage:
-  repository: tccr.io/truecharts/minecraft-java11-jdk
-  tag: v2023.4.1@sha256:b0e951b55d1b91a1bb6a6ae7b7585526b60d95bd34e11281de7e701197b1d34c
+  repository: itzg/minecraft-server
+  tag: 2023.11.1-java11-jdk@sha256:d8167b33d2da2d8f5ca1e41b9a170c07561b59497b4206140796ba2e98569a2a
   pullPolicy: Always
 j11j9Image:
-  repository: tccr.io/truecharts/minecraft-java11-openj9
-  tag: v2023.4.1@sha256:1d15fe6df28051934505a0eb52331dfac63dd506bcc9d6f7179a58184aed5028
+  repository: itzg/minecraft-server
+  tag: 2023.11.1-java11-openj9@sha256:f327ea42b512896544fc7b44f1029d311ebf79312863a2ceb909ea6570ccf410
   pullPolicy: Always
 j8Image:
-  repository: tccr.io/truecharts/minecraft-java8
-  tag: latest@sha256:59b850aed3a9507932bd8266c8d0d5ff3a3baecb94c43ebec931d6871c497353
+  repository: itzg/minecraft-server
+  tag: 2023.11.1-java8@sha256:cf744e3945c3a3c3dd4c4f98e639f9b959c73d6766217dda42fdf91fc9f80b27
   pullPolicy: Always
-j8gceImage:
-  repository: tccr.io/truecharts/minecraft-java8-graalvm-ce
-  tag: latest@sha256:7564fd2bb91bc84bfa2bfeb2d3f4331329066771716d2d03482a57774ceb3afa
+j8graalvmImage:
+  repository: itzg/minecraft-server
+  tag: 2023.11.1-java8-graalvm-ce@sha256:8a878a24266f5d6c8d448b28f8c8bcc6d167cc5f5c10e629913c9a58db0d7cad
   pullPolicy: Always
 j8jdkImage:
-  repository: tccr.io/truecharts/minecraft-java8-jdk
-  tag: v2023.4.1@sha256:f9d8a8f43b98977eecd72d234e10d943c8e567ff10aefd425476ddc2633d43aa
+  repository: itzg/minecraft-server
+  tag: 2023.11.1-java8-jdk@sha256:3810bf10ff4f637851a950c47b2c4eb6de377b3afdde25ebcb16d263f536c6dd
   pullPolicy: Always
 j8j9Image:
-  repository: tccr.io/truecharts/minecraft-java8-openj9
-  tag: v2023.4.1@sha256:8ef5e9d3e25d32a541f89d616289003f5cee8b15cb0569e79b2e778d3b0b68d4
+  repository: itzg/minecraft-server
+  tag: 2023.11.1-java8-openj9@sha256:076c6a872b241df47580064171e67ff6d9b1826134169fe4201c5cedd3456f58
   pullPolicy: Always
 
 service:
@@ -183,12 +187,10 @@ workload:
             # CF_OVERRIDES_SKIP_EXISTING
             # CF_PARALLEL_DOWNLOADS
             # CF_SET_LEVEL_FROM
-
 persistence:
   data:
     enabled: true
     mountPath: "/data"
-
 portal:
   open:
     enabled: false

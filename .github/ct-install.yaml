@@ -12,21 +12,26 @@ chart-dirs:
 excluded-charts:
   - charts/dependency/subchart
   - charts/incubator/twingate-connector
+  - charts/incubator/docassemble
+  - charts/incubator/eco
   - charts/incubator/midarr
   - charts/incubator/orbital-sync
   - charts/incubator/plex-meta-manager
-  - charts/incubator/tauticord
+  - charts/incubator/telepush
   - charts/library/common
   - charts/stable/alertmanager-bot
   - charts/stable/alertmanager-bot
   - charts/stable/alertmanager-discord
   - charts/stable/amcrest2mqtt
+  - charts/stable/arksurvivalevolved
+  - charts/stable/tauticord
   - charts/stable/discordgsm
   - charts/stable/facebox
   - charts/stable/foundryvtt
   - charts/stable/heimdall
   - charts/stable/mc-router
   - charts/stable/multus
+  - charts/stable/local-ai
   - charts/stable/orbital-sync
   - charts/stable/plex-meta-manager
   - charts/stable/pod-gateway
@@ -45,3 +50,10 @@ chart-repos:
   - truecharts-library=https://library-charts.truecharts.org
   - truecharts-deps=https://deps.truecharts.org
   - jetstack=https://charts.jetstack.io
+  - vmwaretanzu=https://vmware-tanzu.github.io/helm-charts
+  - cnpg=https://cloudnative-pg.github.io/charts
+  - metallb=https://metallb.github.io/metallb
+  - prometheus-community=https://prometheus-community.github.io/helm-charts
+  - openebs=https://openebs.github.io/charts
+  - csi-driver-smb=https://raw.githubusercontent.com/kubernetes-csi/csi-driver-smb/master/charts
+  - csi-driver-nfs=https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/charts

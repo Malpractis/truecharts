@@ -7,28 +7,18 @@
   {{- end }}
 
 configmap:
-  web-config:
-    enabled: true
-    data:
-      PORT: {{ .Values.service.web.ports.web.port | quote }}
-      NODE_ENV: production
-      IMMICH_SERVER_URL: {{ printf "http://%v-server:%v" $fname .Values.service.server.ports.server.port }}
-      PUBLIC_IMMICH_SERVER_URL: {{ printf "http://%v-server:%v" $fname .Values.service.server.ports.server.port }}
-      {{- with .Values.immich.public_login_page_message }}
-      PUBLIC_LOGIN_PAGE_MESSAGE: {{ . }}
-      {{- end }}
-
   server-config:
     enabled: true
     data:
-      SERVER_PORT: {{ .Values.service.server.ports.server.port | quote }}
+      SERVER_PORT: {{ .Values.service.main.ports.main.port | quote }}
+      {{- with .Values.immich.public_login_page_message }}
+      PUBLIC_LOGIN_PAGE_MESSAGE: {{ . }}
+      {{- end }}
 
   micro-config:
     enabled: true
     data:
       MICROSERVICES_PORT: {{ .Values.service.microservices.ports.microservices.port | quote }}
-      DISABLE_REVERSE_GEOCODING: {{ .Values.immich.disable_reverse_geocoding | quote }}
-      REVERSE_GEOCODING_PRECISION: {{ .Values.immich.reverse_geocoding_precision | quote }}
       REVERSE_GEOCODING_DUMP_DIRECTORY: {{ .Values.persistence.microcache.targetSelector.microservices.microservices.mountPath }}
 
   {{- if .Values.immich.enable_ml }}
@@ -47,10 +37,9 @@ configmap:
     data:
       NODE_ENV: production
       LOG_LEVEL: {{ .Values.immich.log_level }}
+      IMMICH_MACHINE_LEARNING_ENABLED: {{ .Values.immich.enable_ml | quote }}
       {{- if .Values.immich.enable_ml }}
       IMMICH_MACHINE_LEARNING_URL: {{ printf "http://%v-machinelearning:%v" $fname .Values.service.machinelearning.ports.machinelearning.port }}
-      {{- else }}
-      IMMICH_MACHINE_LEARNING_URL: "false"
       {{- end }}
       TYPESENSE_ENABLED: {{ .Values.immich.enable_typesense | quote }}
       {{- if .Values.immich.enable_typesense }}
@@ -58,12 +47,6 @@ configmap:
       TYPESENSE_HOST: {{ printf "%v-typesense" $fname }}
       TYPESENSE_PORT: {{ .Values.service.typesense.ports.typesense.port | quote }}
       {{- end }}
-
-  proxy-config:
-    enabled: true
-    data:
-      IMMICH_WEB_URL: {{ printf "http://%v-web:%v" $fname .Values.service.web.ports.web.port }}
-      IMMICH_SERVER_URL: {{ printf "http://%v-server:%v" $fname .Values.service.server.ports.server.port }}
 
 secret:
   typesense-secret:

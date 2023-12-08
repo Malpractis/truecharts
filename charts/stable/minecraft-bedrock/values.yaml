@@ -1,15 +1,13 @@
 image:
-  repository: tccr.io/truecharts/minecraft-bedrock
-  tag: v2023.7.1@sha256:7efd498fc50d228fe44ece833ad6bc4204f66ae422be84ad39f6c56f83673165
+  repository: itzg/minecraft-bedrock-server
+  tag: 2023.8.1@sha256:e2019e959daa70dffd1468aaa1348bc906170709bf2c790bee302fc1efedbde7
   pullPolicy: Always
-
 service:
   main:
     ports:
       main:
         port: 19132
         protocol: udp
-
 workload:
   main:
     podSpec:
@@ -31,7 +29,8 @@ workload:
             startup:
               enabled: false
           env:
-            EULA: "TRUE"
+            EULA: true
+            ENABLE_LAN_VISIBILITY: false
             VERSION: "LATEST"
             SERVER_NAME: "TrueCharts Dedicated Server!"
             SERVER_PORT: "{{ .Values.service.main.ports.main.port }}"
@@ -57,12 +56,10 @@ workload:
             PLAYER_MOVEMENT_DURATION_THRESHOLD_IN_MS: 500
             CORRECT_PLAYER_MOVEMENT: false
             # OPS: "XUID,XUID"
-
 persistence:
   config:
     enabled: true
     mountPath: "/data"
-
 portal:
   open:
     enabled: false

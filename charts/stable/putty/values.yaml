@@ -1,6 +1,6 @@
 image:
-  repository: tccr.io/truecharts/putty
-  tag: v23.06.1@sha256:849282650666d0a51a5cc28b18cd07632b49431ddaf7a74bbeb3f834d08604e2
+  repository: jlesage/putty
+  tag: v23.11.2@sha256:340eaaac4919acd07567996eff3c5a39fbba8b3bd724bf34cddf890d68bdfce8
   pullPolicy: IfNotPresent
 service:
   main:

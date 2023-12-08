@@ -1,22 +1,19 @@
 image:
-  repository: tccr.io/truecharts/dillinger
+  repository: ghcr.io/linuxserver/dillinger
   pullPolicy: IfNotPresent
-  tag: v3.39.1@sha256:881713daec79cfb6bb61e846774104ecb63c694754dd78e9794c594663a8f593
-
+  tag: 3.39.1@sha256:0d8a9413656d14bc6ee0422cd9d6cb9f2df81dfa06e99de940024bbf17dc9244
 securityContext:
   container:
     runAsNonRoot: false
     readOnlyRootFilesystem: false
     runAsUser: 0
     runAsGroup: 0
-
 service:
   main:
     ports:
       main:
         targetPort: 8080
         port: 10143
-
 workload:
   main:
     podSpec:
@@ -33,12 +30,10 @@ workload:
               type: http
               path: /
           env: {}
-
 persistence:
   config:
     enabled: true
     mountPath: /config
-
 portal:
   open:
     enabled: true

@@ -1,15 +1,14 @@
 image:
-  repository: tccr.io/truecharts/mattermost
-  tag: v8.1.0@sha256:f1b5fa59fb0935f533182faf54ae5c580506b92268e781c00db058cebb4d3c31
+  repository: mattermost/mattermost-enterprise-edition
+  tag: release-9.3@sha256:4d3e48262ad86437d702df22e531ecfabf0122f56f6b496dd6e555f2a393558c
   pullPolicy: IfNotPresent
-
 workload:
   main:
     podSpec:
       containers:
         main:
           env:
-            TIMEZONE: '{{ .Values.TZ }}'
+            TIMEZONE: "{{ .Values.TZ }}"
             MM_SQLSETTINGS_DRIVERNAME: "postgres"
             MM_BLEVESETTINGS_INDEXDIR: "/mattermost/bleve-indexes"
             MM_SERVICESETTINGS_SITEURL: "https://test.example.com"
@@ -20,7 +19,6 @@ service:
       main:
         port: 10239
         targetPort: 8065
-
 persistence:
   config:
     enabled: true
@@ -40,13 +38,11 @@ persistence:
   bleveindexes:
     enabled: true
     mountPath: "/mattermost/bleve-indexes"
-
 cnpg:
   main:
     enabled: true
     user: mattermost
     database: mattermost
-
 portal:
   open:
     enabled: true

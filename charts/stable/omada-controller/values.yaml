@@ -1,6 +1,6 @@
 image:
-  repository: tccr.io/truecharts/omada-controller
-  tag: 5.9.0@sha256:57cb503da5ecdc12771651754f9892daf467b92605238ec1a5868ca3759bfc35
+  repository: mbentley/omada-controller
+  tag: 5.13@sha256:912007aa2157f9cd959290f64a0749fac359108e9b7b84c33aa2e6331225bb49
   pullPolicy: IfNotPresent
 service:
   main:

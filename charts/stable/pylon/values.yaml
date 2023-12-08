@@ -1,7 +1,7 @@
 image:
-  repository: tccr.io/truecharts/pylon
+  repository: ghcr.io/linuxserver/pylon
   pullPolicy: IfNotPresent
-  tag: v2.10.0@sha256:fba7761b23864d467f82b47e31e1e52176493811a1b26ca9a2db01017f1ee9c2
+  tag: 2.10.0@sha256:b47b6ec983f59f878ebc7fa4775e36245f44f82117adb072fcc2370596a82c02
 service:
   main:
     ports:

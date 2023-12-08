@@ -1,6 +1,6 @@
 image:
-  repository: tccr.io/truecharts/ztcuui-aio
-  tag: v1.2.15@sha256:1d5793ceebc8727554d6221f31f3d65e020fcc4d11434667311c53cfba01a38d
+  repository: keynetworks/ztncui
+  tag: 1.2.16@sha256:db32c0778b13f6fe10d03e2c3dad96f0b311a0f482cdc2002506f0d68c27b73a
   pullPolicy: IfNotPresent
 service:
   main:

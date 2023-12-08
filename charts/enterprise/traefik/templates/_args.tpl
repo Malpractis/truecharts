@@ -173,9 +173,19 @@ args:
   {{/* End of GeoBlock */}}
   {{/* RealIP */}}
   {{- if .Values.middlewares.realIP }}
-  - "--experimental.localPlugins.traefik-real-ip.modulename=github.com/soulbalz/traefik-real-ip"
+  - "--experimental.localPlugins.traefik-real-ip.modulename=github.com/jramsgz/traefik-real-ip"
   {{- end }}
   {{/* End of RealIP */}}
+  {{/* ModSecurity */}}
+  {{- if .Values.middlewares.modsecurity }}
+  - "--experimental.localPlugins.traefik-modsecurity-plugin.modulename=github.com/acouvreur/traefik-modsecurity-plugin"
+  {{- end }}
+  {{/* End of ModSecurity */}}
+  {{/* RewriteResponseHeaders */}}
+  {{- if .Values.middlewares.rewriteResponseHeaders }}
+  - "--experimental.localPlugins.rewriteResponseHeaders.modulename=github.com/XciD/traefik-plugin-rewrite-headers"
+  {{- end }}
+  {{/* End of RewriteResponseHeaders */}}
   {{- with .Values.additionalArguments }}
   {{- range . }}
   - {{ . | quote }}

@@ -1,7 +1,7 @@
 image:
-  repository: tccr.io/truecharts/grav
+  repository: ghcr.io/linuxserver/grav
   pullPolicy: IfNotPresent
-  tag: v1.7.42@sha256:21b027185903b34f9903aac4a41434fb9d2467b57ef58db10e4c09770c7473f6
+  tag: 1.7.43@sha256:dcc55a244ad8c9291dd3e5aa33710027613eb2390f396942139921700affd7b3
 service:
   main:
     ports:

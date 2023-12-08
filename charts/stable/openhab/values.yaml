@@ -1,7 +1,7 @@
 image:
-  repository: tccr.io/truecharts/openhab
+  repository: openhab/openhab
   pullPolicy: IfNotPresent
-  tag: v4.0.1@sha256:53e9da0fa37e89ab10a833655c107cfbb2d7f5e0fe72958f779c7022568ebf50
+  tag: 4.0.4@sha256:247db89a87fa7a21d35dbcb4ea866ccffca4494993533d478275be30deb0c106
 service:
   main:
     ports:

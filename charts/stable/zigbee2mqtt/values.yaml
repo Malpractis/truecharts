@@ -1,6 +1,6 @@
 image:
-  repository: tccr.io/truecharts/zigbee2mqtt
-  tag: v1.32.2@sha256:0d78c903590eef5691cdc811eb3c1ab9b1ddcc02f39386bad5e20c291afeac1f
+  repository: koenkk/zigbee2mqtt
+  tag: 1.33.2@sha256:44a431c18fffea0a56cf5fcd1c3c5ad554d1b207bd0525e75ee154928c58cb05
   pullPolicy: IfNotPresent
 service:
   main:
@@ -12,7 +12,6 @@ persistence:
     enabled: true
     mountPath: "/data"
     targetSelectAll: true
-
 portal:
   open:
     enabled: true
@@ -48,8 +47,10 @@ workload:
             - >
               if [ -f /data/configuration.yaml ] || [ ${USE_CUSTOM_CONFIG_FILE} == true ]; then
 
+
                 echo "Initial configuration exists or User selected to use custom configuration file. Skipping...";
               else
+
 
                 echo "Creating initial configuration";
                 touch /data/configuration.yaml;
@@ -80,6 +81,7 @@ workload:
                 echo "##########################################################" >> /data/configuration.yaml;
                 echo 'Initial configuration file created at "/data/configuration.yaml"';
               fi;
+
       containers:
         main:
           env:

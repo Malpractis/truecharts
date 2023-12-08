@@ -1,6 +1,6 @@
 image:
-  repository: tccr.io/truecharts/ispy-agent-dvr
-  tag: v4.9.3.0@sha256:b14322c0c35b0226af31c9947fa137af8405d8d1add1b20d4f7d999828d789b5
+  repository: doitandbedone/ispyagentdvr
+  tag: 5.1.4.0@sha256:c9fd33c1c07796e415f5692812ea245f11d6506f18f12a3d42bd518f99bdae46
   pullPolicy: IfNotPresent
 service:
   main:

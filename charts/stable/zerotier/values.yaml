@@ -1,7 +1,7 @@
 image:
-  repository: tccr.io/truecharts/zerotier
+  repository: docker.io/zerotier/zerotier
   pullPolicy: IfNotPresent
-  tag: 1.10.6@sha256:7cffa55238aedff4f0f552035925146f4b512bed338d0aa24fd61e656f0052ec
+  tag: 1.12.2@sha256:4cb535806f1d1ba71a48a8f38cc0b72e1b0bc3be8474379151efc810fe2fa5e2
 service:
   main:
     ports:

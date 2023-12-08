@@ -1,6 +1,6 @@
 image:
-  repository: tccr.io/truecharts/grocy
-  tag: v4.0.1@sha256:78f25bda9d72a3852fe0fd4ab6cab426c9bf9853b69651b0e1c4e26aa3057820
+  repository: ghcr.io/linuxserver/grocy
+  tag: 4.0.3@sha256:8519b1c818ea6b0440c3f592e304b7446ff625d39bd0d32ec8cc85c7d786031b
   pullPolicy: IfNotPresent
 service:
   main:

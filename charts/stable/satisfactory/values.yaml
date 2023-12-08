@@ -1,11 +1,15 @@
 image:
-  repository: tccr.io/truecharts/satisfactory
+  repository: wolveix/satisfactory-server
   pullPolicy: IfNotPresent
-  tag: v1.5.2@sha256:9f986a553bf97418d96e205fce35b395323a73126b01f41ebdca7262242af2be
+  tag: v1.5.6@sha256:77bbd2eed50fbf49114dcce090a71a07933a7496787f07bfc947fb6fc5367efa
 persistence:
   config:
     enabled: true
     mountPath: "/config"
+  tmp-dumps:
+    enabled: true
+    type: emptyDir
+    mountPath: "/tmp/dumps"
 service:
   main:
     ports:

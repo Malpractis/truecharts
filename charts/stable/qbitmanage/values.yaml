@@ -1,7 +1,7 @@
 image:
-  repository: tccr.io/truecharts/qbitmanage
+  repository: bobokun/qbit_manage
   pullPolicy: IfNotPresent
-  tag: v4.0.2@sha256:c3ec01ac4fd1f4c23a86fddd46a745949584543299aa2946e84bf82ccfa02179
+  tag: v4.0.6@sha256:50d20cee30fe38db71ecd56776a5d3e049d56bdeb1e81877af317b7c71e9a752
 service:
   main:
     enabled: false

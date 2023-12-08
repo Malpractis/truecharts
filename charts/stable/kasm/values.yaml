@@ -1,7 +1,7 @@
 image:
   pullPolicy: IfNotPresent
-  repository: tccr.io/truecharts/kasm
-  tag: 1.13.0@sha256:3915ce39b7dd50437994a0bfd127710370caf2203c072ed5adb914c41045d706
+  repository: kasmweb/workspaces
+  tag: 1.14.0@sha256:ccf420bd8c238c01702942d155f355e0af085564e5c1421296698b55d3c685d6
 kasm:
   mountUdev: false
   mountInput: false

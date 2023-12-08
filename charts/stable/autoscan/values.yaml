@@ -1,15 +1,13 @@
 image:
   pullPolicy: IfNotPresent
-  repository: tccr.io/truecharts/autoscan
-  tag: latest@sha256:ee6ac45e656f8e8e888a1100b729f90c4ced25e00ac92397068560a44c4a92b1
-
+  repository: cr.hotio.dev/hotio/autoscan
+  tag: latest@sha256:a15a6db9b2a3888d2d8bb8d65f51df67f3999225348c4118faa6a317feea0a53
 securityContext:
   container:
     readOnlyRootFilesystem: false
     runAsNonRoot: false
     runAsGroup: 0
     runAsUser: 0
-
 service:
   main:
     ports:
@@ -17,7 +15,6 @@ service:
         port: 3030
         protocol: http
         targetPort: 3030
-
 workload:
   main:
     podSpec:
@@ -33,12 +30,10 @@ workload:
           env:
             PLEX_LOGIN: ""
             PLEX_PASSWORD: ""
-
 persistence:
   config:
     enabled: true
     mountPath: /config
-
 portal:
   open:
     enabled: false

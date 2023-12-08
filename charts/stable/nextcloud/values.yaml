@@ -1,28 +1,27 @@
 image:
   repository: tccr.io/truecharts/nextcloud-fpm
   pullPolicy: IfNotPresent
-  tag: v27.0.0@sha256:0810b5cab6f7e927c80225dd5debfede8836759e5b5237b699373cf927057b02
+  tag: v27.1.4@sha256:6bd558570dcebd0dd9c56df158eca7893e5926f1130b810101c2f67888502c07
 nginxImage:
-  repository: tccr.io/truecharts/nginx-unprivileged
+  repository: nginxinc/nginx-unprivileged
   pullPolicy: IfNotPresent
-  tag: v1.25.1@sha256:0d56942ece7a7eafcf13608a7cfda8ee11b562f83192cec4b8bbe7cc7934cec2
+  tag: 1.25.3@sha256:a7ef4617598260e19c3b20262263f7293b06845a920b7dd242a17c4b749f8efd
 imaginaryImage:
   repository: tccr.io/truecharts/nextcloud-imaginary
   pullPolicy: IfNotPresent
-  tag: v20230401@sha256:dcca0bdeb9dd760bece6c8d1fa907062947b0055a1a1fafdf96d82b0f336efae
+  tag: v20230401@sha256:6a227d1b0200d29f25028e07b8852f60e3d91a5814048933e70eccee749dc04c
 hpbImage:
   repository: tccr.io/truecharts/nextcloud-push-notify
   pullPolicy: IfNotPresent
-  tag: v0.6.3@sha256:01fa824efebf851985b15a0e48d94e89992e26f27f07e593f7751354ed3d0ea6
+  tag: v0.6.3@sha256:b9c35ab123354eeac3996e361f8c30b8e4de6d2ccd69e5179a7c2a101a67b46f
 clamavImage:
-  repository: tccr.io/truecharts/clamav
+  repository: clamav/clamav
   pullPolicy: IfNotPresent
-  tag: v1.1.0@sha256:b3bbc42571cb14323f2383fd1bf8a0478da7c25c2e126090b2f7069a7c69846a
+  tag: 1.2.1@sha256:c447f9c713058cdb915c5becbef004a678cd7b8d6f5d70ec53479ba7687c3375
 collaboraImage:
-  repository: tccr.io/truecharts/collabora
+  repository: collabora/code
   pullPolicy: IfNotPresent
-  tag: v23.05.2.2.1@sha256:ef92d2d819318c1922b040351e1ac6f0a98e11f5821475fee2709694d92f6754
-
+  tag: 23.05.5.4.1@sha256:a8cce07c949aa59cea0a7f1f220266a1a6d886c717c3b5005782baf6f384d645
 nextcloud:
   # Initial Credentials
   credentials:
@@ -36,6 +35,8 @@ nextcloud:
     # IP used for exposing nextcloud,
     # often the loadbalancer IP
     accessIP: ""
+    # Allows Nextcloud to connect to unsecure (http) endpoints
+    force_enable_allow_local_remote_servers: false
   # File settings
   files:
     shared_folder_name: Shared
@@ -111,6 +112,8 @@ nextcloud:
     # Only add the OnlyOffice settings
     enabled: false
     url: ""
+    internal_url: ""
+    verify_ssl: true
     jwt: ""
     jwt_header: Authorization
   # PHP settings
@@ -127,7 +130,6 @@ nextcloud:
     memory_consumption: 128
     revalidate_freq: 60
     jit_buffer_size: 128
-
 # Do NOT edit below this line
 workload:
   # Nextcloud php-fpm
@@ -320,9 +322,8 @@ workload:
               enabled: true
               type: tcp
               port: "{{ .Values.service.collabora.ports.collabora.targetPort }}"
-
 cronjobs:
-    # Don't change names, it's used in the persistence
+  # Don't change names, it's used in the persistence
   - name: nextcloud-cron
     enabled: true
     schedule: "*/5 * * * *"
@@ -337,7 +338,6 @@ cronjobs:
       - echo "Running [occ preview:pre-generate] ..."
       - occ preview:pre-generate
       - echo "Finished [occ preview:pre-generate]"
-
 service:
   # Main service links to ingress easier
   # That's why the nginx is swapped with nextcloud
@@ -396,7 +396,6 @@ service:
         port: 9980
         targetPort: 9980
         targetSelector: collabora
-
 persistence:
   php-tune:
     enabled: true
@@ -499,17 +498,15 @@ persistence:
         nginx:
           mountPath: /var/www/html/data
           readOnly: true
-
 cnpg:
   main:
     enabled: true
     user: nextcloud
     database: nextcloud
-
 redis:
   enabled: true
   username: default
-
 portal:
   open:
     enabled: true
+updated: true

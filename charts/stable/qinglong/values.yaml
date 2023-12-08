@@ -1,7 +1,7 @@
 image:
-  repository: tccr.io/truecharts/qinglong
+  repository: whyour/qinglong
   pullPolicy: IfNotPresent
-  tag: v2.15.20@sha256:9447486e5062e6be200776061b1264bfe036f85e7dbc66720e34263ed706c4ef
+  tag: 2.16.5@sha256:d79c2b1741ba3583f383426ae78f2cfd68597f5a654917899fa3a5aead72a93c
 service:
   main:
     ports:
